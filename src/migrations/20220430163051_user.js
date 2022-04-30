@@ -8,7 +8,8 @@ const { CHARSET, USER_TABLE } = require('../configs/DBConfig');
 
 exports.up = knex => (
     knex.schema.createTable(USER_TABLE, table => {
-    table.bigInteger('id').unsigned().notNullable().index();
+    table.specificType('id', 'serial');
+    table.primary('id');
     table.string('user_name', 50).notNullable();
     table.string('name', 256).notNullable();
     table.string('mail', 256).notNullable();

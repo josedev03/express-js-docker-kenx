@@ -7,7 +7,8 @@
     "dev": "nodemon src/index.js",
     "knex": "knex init",
     "migrations": "npx knex migrate:latest --env db",
-    "rollback": "npx knex migrate:rollback --env db"
+    "rollback": "npx knex migrate:rollback --env db",
+    "seed": "npx knex seed:run --env db"
   },
   "keywords": [],
   "author": "",

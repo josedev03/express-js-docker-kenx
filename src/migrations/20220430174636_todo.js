@@ -6,7 +6,8 @@ const { CHARSET, TODO_TABLE, USER_TABLE } = require('../configs/DBConfig')
  */
 exports.up = knex => (
     knex.schema.createTable(TODO_TABLE, table => {
-    table.bigInteger('id').unsigned().notNullable().index();
+    table.specificType('id', 'serial');
+    table.primary('id');
     table.string('description', 256);
     table.boolean('finish');
     table.bigInteger('user_id').unsigned().notNullable().index();

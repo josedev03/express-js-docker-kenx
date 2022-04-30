@@ -7,3 +7,8 @@ API REST - docker compose, knex (mysql), migrations, seeds
 ```
 npx knex migrate:make <operation_table_name> --env db
 ```
+
+- Create seed file:
+```
+npx knex seed:make <operation_table_name> --env db
+```
