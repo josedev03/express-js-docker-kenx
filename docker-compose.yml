@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  mysql:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_USER: admintodo
+      MYSQL_PASSWORD: prueba1234
+      MYSQL_DATABASE: todo
+      MYSQL_ROOT_PASSWORD: root
+      ALLOW_EMPTY_PASSWORD: 'yes'
+    ports:
+      - 3306:3306

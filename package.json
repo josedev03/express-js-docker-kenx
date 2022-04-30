@@ -1,0 +1,23 @@
+{
+  "name": "express-js-docker-kenx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "knex": "knex init",
+    "migrations": "npx knex migrate:latest --env db",
+    "rollback": "npx knex migrate:rollback --env db"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "knex": "^2.0.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
